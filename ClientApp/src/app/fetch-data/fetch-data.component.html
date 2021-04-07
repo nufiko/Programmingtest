@@ -1,0 +1,20 @@
+<h1 id="tableLabel">Best 3 submissions</h1>
+
+<p *ngIf="!tasks"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="tasks">
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>Score</th>
+      <th>Programming Language</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.userName }}</td>
+      <td>{{ task.score }}</td>
+      <td>{{ task.programmingLanguage.displayName }}</td>
+    </tr>
+  </tbody>
+</table>
