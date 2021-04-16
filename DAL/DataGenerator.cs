@@ -57,7 +57,15 @@ namespace ProgrammingTest.DAL
                         ProgrammingTask = context.ProgrammingTasks.Find(1),
                         Score = 1241,
                         UserName = "Jan"
-                    });
+                    },
+                     new Model.Submission
+                     {
+                         Id = 2,
+                         ProgrammingLanguage = context.ProgrammingLanguages.Find(2),
+                         ProgrammingTask = context.ProgrammingTasks.Find(1),
+                         Score = 1341,
+                         UserName = "Mark"
+                     });
 
                 context.SaveChanges();
             }
